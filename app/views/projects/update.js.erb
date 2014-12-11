@@ -1,0 +1,5 @@
+<%  if @project.errors.any? %>
+  alert('<%= @project.errors.full_messages[0] %>');
+<% else%>
+  window.location.href = '<%= projects_path %>'
+<%end %>
