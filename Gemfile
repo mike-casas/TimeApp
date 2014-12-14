@@ -4,7 +4,9 @@ gem 'font-awesome-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.8'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: :development
+
+gem 'pg' ,group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -38,8 +40,9 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'rails_12factor' ,group: :production
 
-gem "annotate", "~> 2.6.5"
+gem "annotate", "~> 2.6.5" ,group: :development
 gem "roadie", "~> 2.4"
 gem "devise"
 gem "bootstrap-sass", "~> 3.3.1"
