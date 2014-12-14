@@ -30,6 +30,6 @@ before_action :authenticate_user!
  private
 
  def parametros
-   params.require(:activity).permit(:descripcion, :Project_id)
+   params.require(:activity).permit(:descripcion, :project_id)
  end
 end

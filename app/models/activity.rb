@@ -1,5 +1,5 @@
 class Activity < ActiveRecord::Base
-  belongs_to :Project
+  belongs_to :project
 
    scope :list, -> { where.not(ended_at: nil)}
 

@@ -17,13 +17,13 @@ ActiveRecord::Schema.define(version: 20141214053635) do
     t.text     "descripcion"
     t.datetime "started_at"
     t.datetime "ended_at"
-    t.integer  "Project_id"
+    t.integer  "project_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "total"
   end
 
-  add_index "activities", ["Project_id"], name: "index_activities_on_Project_id"
+  add_index "activities", ["project_id"], name: "index_activities_on_project_id"
 
   create_table "projects", force: true do |t|
     t.string   "name"

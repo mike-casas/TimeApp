@@ -4,7 +4,7 @@ class CreateActivities < ActiveRecord::Migration
       t.text :descripcion
       t.date :started_at
       t.date :ended_at
-      t.references :Project, index: true
+      t.references :project, index: true
 
       t.timestamps
     end
