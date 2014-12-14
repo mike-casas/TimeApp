@@ -11,15 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141211033412) do
+ActiveRecord::Schema.define(version: 20141214053635) do
 
   create_table "activities", force: true do |t|
     t.text     "descripcion"
-    t.date     "started_at"
-    t.date     "ended_at"
+    t.datetime "started_at"
+    t.datetime "ended_at"
     t.integer  "Project_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "total"
   end
 
   add_index "activities", ["Project_id"], name: "index_activities_on_Project_id"

@@ -1,0 +1,13 @@
+es:
+  hello: "Hola mundo"
+  house: "casa"
+
+#para cambiar el idioma a label de los form de los modelos
+activitie:
+   title: 'Titulo'
+
+mensajes:
+   exit : 'exito'
+
+
+

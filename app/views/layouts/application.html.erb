@@ -28,13 +28,17 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
       <ul class="nav navbar-nav">
          <% if user_signed_in? %>
-           <li class="active">
+
+           <li <% if current_page?(activities_path) %>class="active"
+            <%end%>>
              <%= link_to "Dashboard",activities_path %>
            </li>
 
-         <li><%= link_to "Project",projects_path, id:"project" %></li>
+         <li  <% if current_page?(projects_path) %> class="active" <%end%>><%= link_to "Project",projects_path, id:"project" %></li>
+
          <% end %>
       </ul>
       <ul class="nav navbar-nav navbar-right">
