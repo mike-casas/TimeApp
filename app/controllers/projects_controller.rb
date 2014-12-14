@@ -2,7 +2,8 @@ class ProjectsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-      @projects=Project.calculo
+      @projects=Project.all
+      @total=Project.calculo
   end
 
   def new
@@ -11,6 +12,8 @@ class ProjectsController < ApplicationController
 
   def create
     @project= Project.create(parametros)
+    @project.user_id= current_user.id
+    @project.save
   end
 
   def edit
