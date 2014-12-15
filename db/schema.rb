@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20141215150559) do
     t.integer  "project_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "total",       limit: 255
+    t.integer  "total",       default: 0
   end
 
   add_index "activities", ["project_id"], name: "index_activities_on_project_id"
