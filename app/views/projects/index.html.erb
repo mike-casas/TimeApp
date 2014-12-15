@@ -17,22 +17,9 @@
             <tbody>
 
               <% @projects.each do |p| %>
-
-
-              <tr>
+               <tr>
                 <td><%= p.name %></td>
-
-                <% @total.each do |pr,v| %>
-
-                   <% if pr == p.id %>
-
-                      <td><%= v %> seconds</td>
-                    <% else %>
-                        <td>0 seconds</td>
-                  <% end %>
-                <% end %>
-
-
+                <td><%= p.total %> Segundos</td>
 
                 <td class="text-right">
                   <%= link_to ('<span class="glyphicon glyphicon-edit"></span>Editar').html_safe, edit_project_path(p), remote: true %>

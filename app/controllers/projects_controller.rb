@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
 
   def index
       @projects=Project.all
-      @total=Project.calculo
+
   end
 
   def new
